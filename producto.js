@@ -59,7 +59,8 @@ Vue.component('producto',{
             this.productos = [];
             let productos = JSON.parse(localStorage.getItem('productos')) || [];
             this.productos = productos.filter(producto=>producto.nombre.toLowerCase().indexOf(valor.toLowerCase())>-1);
-
+             
+            //aqui vemos las categorias 
             this.categorias = [];
             let categorias = JSON.parse(localStorage.getItem('categorias')) || [];
             this.categorias = categorias.map(categoria=>{
