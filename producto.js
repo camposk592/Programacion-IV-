@@ -1,15 +1,15 @@
-Vue.component('v-select-categoria',VueSelect.VueSelect);
+Vue.component('v-select-registro',VueSelect.VueSelect);
 Vue.component('producto',{
     data:()=>{
         return {
             buscar:'',
             productos:[],
-            categorias:[],
+            registros:[],
             producto:{
                 accion : 'nuevo',
                 mostrar_msg : false,
                 msg : '',
-                categoria: {
+                registro: {
                     id: '',
                     label: '',
                 },
@@ -60,13 +60,13 @@ Vue.component('producto',{
             let productos = JSON.parse(localStorage.getItem('productos')) || [];
             this.productos = productos.filter(producto=>producto.nombre.toLowerCase().indexOf(valor.toLowerCase())>-1);
              
-            //aqui vemos las categorias 
-            this.categorias = [];
-            let categorias = JSON.parse(localStorage.getItem('categorias')) || [];
-            this.categorias = categorias.map(categoria=>{
+            //aqui vemos las registros 
+            this.registros = [];
+            let registros = JSON.parse(localStorage.getItem('registros')) || [];
+            this.registros = registros.map(registro=>{
                 return {
-                    id: categoria.idCategoria,
-                    label: categoria.nombre,
+                    id: registro.idCategoria,
+                    label: registro.nombre,
                 }
             });
         },
@@ -97,8 +97,8 @@ Vue.component('producto',{
                                 Categoria:
                             </div>
                             <div class="col col-md-3">
-                                <v-select-categoria v-model="producto.categoria" 
-                                    :options="categorias" placeholder="Seleccione una categoria"/>
+                                <v-select-registro v-model="producto.registro" 
+                                    :options="registros" placeholder="Seleccione una registro"/>
                             </div>
                         </div>
                         <div class="row p-1">

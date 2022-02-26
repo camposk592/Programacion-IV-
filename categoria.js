@@ -43,7 +43,7 @@ Vue.component('categoria',{
                 categorias.splice(index,1);
             }
 
-            //crear base de datos
+            
             localStorage.setItem('categorias', JSON.stringify(categorias));
             this.nuevoCategoria();
             this.obtenerCategorias();
