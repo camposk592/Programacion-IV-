@@ -12,7 +12,8 @@ Vue.component('registro',{
                 nombre: '',
                 direccion: '',
                 telefono: '',
-                dui: ''
+                dui: '',
+                fecha: ''
             }
         }
     },
@@ -64,6 +65,7 @@ Vue.component('registro',{
             this.registro.direccion = '';
             this.registro.telefono = '';
             this.registro.dui = '';
+            this.registro.fecha = '';
         }
     },
     created(){
@@ -73,7 +75,7 @@ Vue.component('registro',{
         <div id="appCiente">
             <div class="card text-white" id="carRegistro">
                 <div class="card-header bg-primary">
-                    Registro de Registros
+                    Registro de Alumnos
                     <button type="button" class="btn-close text-end" data-bs-dismiss="alert" data-bs-target="#carRegistro" aria-label="Close"></button>
                 </div>
                 <div class="card-body text-dark">
@@ -108,6 +110,14 @@ Vue.component('registro',{
                                 <input title="Ingrese el DUI" v-model="registro.dui" pattern="[0-9]{8}-[0-9]{1}" required type="text" class="form-control">
                             </div>
                         </div>
+
+                        <div class="row p-1">
+                            <div class="col col-md-2">Fecha:</div>
+                            <div class="col col-md-3">
+                                <input title="Ingrese la fecha" v-model="registro.fecha" required pattern="{0000-00-00}"  type="date" class="form-control form-control-sm">
+                            </div>
+                        </div>
+
                         <div class="row p-1">
                             <div class="col col-md-5 text-center">
                                 <div v-if="registro.mostrar_msg" class="alert alert-primary alert-dismissible fade show" role="alert">
@@ -127,7 +137,7 @@ Vue.component('registro',{
             </div>
             <div class="card text-white" id="carBuscarRegistro">
                 <div class="card-header bg-primary">
-                    Busqueda de Registros
+                    Busqueda de Alumnos
                     <button type="button" class="btn-close" data-bs-dismiss="alert" data-bs-target="#carBuscarRegistro" aria-label="Close"></button>
                 </div>
                 <div class="card-body">
@@ -144,6 +154,7 @@ Vue.component('registro',{
                                 <th>DIRECCION</th>
                                 <th>TEL</th>
                                 <th>DUI</th>
+                                <th>FECHA</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -154,6 +165,7 @@ Vue.component('registro',{
                                 <td>{{item.direccion}}</td>
                                 <td>{{item.telefono}}</td>
                                 <td>{{item.dui}}</td>
+                                <td>{{item.fecha}}</td>
                                 <td>
                                     <button class="btn btn-danger" @click="eliminarRegistro(item)">Eliminar</button>
                                 </td>

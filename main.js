@@ -6,7 +6,7 @@ var appSistema = new Vue({
     el: '#appSistema',
     data: {
         forms:{
-            'producto':{mostrar:false},
+            'matricula':{mostrar:false},
             'registro':{mostrar:false},
             'categoria':{mostrar:false}
         }

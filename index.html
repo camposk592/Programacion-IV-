@@ -27,18 +27,20 @@
                         <a data-form="registro" class="nav-link mostrar" href="#">Registro</a>
                     </li>
                     <li class="nav-item">
+                        <a data-form="matricula" class="nav-link mostrar" href="#">Matricula</a>
+                    </li>
+
+                    <li class="nav-item">
                         <a data-form="categoria" class="nav-link mostrar" href="#">Categorias</a>
                     </li>
-                    <li class="nav-item">
-                        <a data-form="producto" class="nav-link mostrar" href="#">Productos</a>
-                    </li>
+
                 </ul>
             </div>
         </div>
     </nav>
     <div id="appSistema" class="container-fluid">
         <categoria ref="categoria" v-show="forms['categoria'].mostrar"></categoria>
-        <producto ref="producto" v-show="forms['producto'].mostrar"></producto>
+        <matricula ref="matricula" v-show="forms['matricula'].mostrar"></matricula>
         <registro ref="registro" v-show="forms['registro'].mostrar"></registro>
     </div>
     
@@ -47,7 +49,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/vue-select@latest"></script>
     <script src="categoria.js"></script>
-    <script src="producto.js"></script>
+    <script src="matricula.js"></script>
     <script src="main.js"></script>
     <script src="registro.js"></script>
 </body>
