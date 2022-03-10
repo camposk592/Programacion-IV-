@@ -46,6 +46,15 @@ Vue.component('cliente',{
             }
             let query = store.put(this.cliente);
             query.onsuccess = e=>{
+                fetch(`private/modulo/cliente/cliente.php?accion=${this.cliente.accion}
+                 &datos=${JSON.stringify(this.cliente)}`, {credentials: 'same-orgin'})
+                 .then(res=>res.json())
+                 .then(data=>{
+                     this.cliente.msg = `Cliente Procesado ${data.msg}`;
+                 })
+                 .error(err=>{
+                     this.cliente.msg = ` Error al guardar el cliente ${err}`;
+                 });
                 this.nuevoCliente();
                 this.obtenerDatos();
                 this.cliente.msg = 'Cliente procesado con exito';
