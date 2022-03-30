@@ -20,7 +20,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">::::SISTEMA UGB:::::</a>
+                <a class="navbar-brand" href="#">::::SISTEMA LARAVEL:::::</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -28,30 +28,31 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link"  href="#">Inicio</a>
+                            <a class="nav-link" href="#">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Alumnos</a>
+                            <a @click="abrirForm('alumno')" class="nav-link" href="#">Alumnos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Docentes</a>
+                            <a @click="abrirForm('docente')"class="nav-link" href="#">Docentes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Materias</a>
+                            <a @click="abrirForm('materia')" class="nav-link" href="#">Materias</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Matricula</a>
+                            <a @click="abrirForm('matricula')" class="nav-link" href="#">Matricula</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Inscripcion</a>
+                            <a @click="abrirForm('inscripcion')" class="nav-link" href="#">Inscripcion</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Notas</a>
+                            <a @click="abrirForm('notas')" class="nav-link" href="#">Notas</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
+        <alumno-component v-bind:from="forms" ref = "alumno" v-show ="forms['alumno'].mostrar" ></alumno-component>
     </div>
     <script src="{{ asset('js/app.js')}}"></script>
 </body>
