@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\alumno;
 use Illuminate\Http\Request;
 
-class Alumno extends Controller
+class Alumnos extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,7 +24,7 @@ class Alumno extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
