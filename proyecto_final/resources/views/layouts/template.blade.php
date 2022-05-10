@@ -36,6 +36,7 @@
                             href="#portfolio">¿Que tipos de prendas aceptamos?</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">¿Que
                             es lo que hacemos?</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">Iniciar Sesion</a></li>
 
                 </ul>
             </div>
@@ -55,11 +56,9 @@
                 <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                 <div class="divider-custom-line"></div>
             </div>
-
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5570.009723109634!2d-88.42315282990188!3d13.3425062037619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2ssv!4v1650246367986!5m2!1ses-419!2ssv"
-                width="1024" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+          
+            <iframe><!-- Aqui C puede colocar una api--></iframe>
             <!-- Masthead Subheading-->
             <p class="masthead-subheading font-weight-light mb-0"></p>
         </div>
@@ -139,7 +138,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
-
+    <!--<a href="https://api.whatsapp.com/send?phone=72770271&text=hola,%20qué%20tal?">
+      Enviar mensaje
+    </a>-->
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>
 
