@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creacion de Usuarios</title>
+</head>
+<body>
+    <form id="frmUsuarios" method="get">
+        Nombre: <input type="text" id="txtUsuario" required>
+        Clave: <input type="password" id="txtClave" required>
+        <input type="submit" value="Enviar">
+    </form>
+    <script>
+        const frm = document.querySelector('#frmUsuarios');
+        frm.addEventListener('submit', e=>{
+            e.preventDefault();
+
+            const usuario = document.querySelector("#txtUsuario").value,
+                clave = document.querySelector("#txtClave").value;
+            let datos = {
+                usuario,
+                clave
+            };
+            fetch('/usuarios',{
+                method : 'GET',
+                body : JSON.stringify(datos),
+                headers : {
+                    'Content-Type' : 'application/json'
+                }
+            }).then(res=>res.json())
+            .then(respuesta=>{
+                console.log(respuesta);
+            })
+        });
+    </script>
+</body>
+</html>
