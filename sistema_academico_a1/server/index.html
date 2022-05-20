@@ -23,8 +23,8 @@
                 usuario,
                 clave
             };
-            fetch('/usuarios',{
-                method : 'GET',
+            fetch('/usuarios/save',{
+                method : 'POST',
                 body : JSON.stringify(datos),
                 headers : {
                     'Content-Type' : 'application/json'
